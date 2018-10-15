@@ -7,8 +7,6 @@
 
 using namespace std;
 
-
-
 struct BRnode
 {
     char color;
@@ -80,8 +78,6 @@ void Load(nodePage* listData, int size, BRtree* obj)
     return;
 }
 
-
-
 void Update(nodePage* listData, int sizeList, BRtree* treeStable, BRtree* treeUnstable)
 {
     BRnode* nodeInSta;
@@ -131,7 +127,6 @@ void Update(nodePage* listData, int sizeList, BRtree* treeStable, BRtree* treeUn
     return;
 }
 
-
 //find the node in unstable tree by hash
 bool Deduplicate(nodePage* listData, int index, BRtree* treeStable, BRtree* treeUnstable)
 {
@@ -157,9 +152,6 @@ bool Deduplicate(nodePage* listData, int index, BRtree* treeStable, BRtree* tree
         return false;
     }
 }
-
-
-
 
 void BRtree::cleanTree()
 {
@@ -213,7 +205,6 @@ BRnode* BRtree::find(int target)
     return NULL;
 }
 
-
 //return the node with wanted id
 //go through all nodes in tree to find the target node
 BRnode* BRtree::find_without_key(int target)
@@ -246,7 +237,6 @@ BRnode* BRtree::recursive_find(BRnode* nodeCurrent, int target)
     }
     return NULL;
 }
-
 
 void BRtree::insert_fixup_br(BRnode* newNode)
 {
@@ -315,7 +305,6 @@ void BRtree::insert_fixup_br(BRnode* newNode)
     return;
 }
 
-
 void BRtree::insert_br(int idInsert, int hashInsert)
 {
     BRnode* nodeTraverse;
@@ -372,7 +361,6 @@ void BRtree::insert_br(int idInsert, int hashInsert)
     insert_fixup_br(nodeNew);
     return;
 }
-
 
 void BRtree::right_rotate_br(BRnode* nodeCurrent)
 {
@@ -451,7 +439,6 @@ void BRtree::left_rotate_br(BRnode* nodeCurrent)
     return;
 }
 
-
 void BRtree::TRANSPLANT_RB(BRnode* u, BRnode* v)
 {
     if (u->parent == leavesBlack)
@@ -519,6 +506,7 @@ void BRtree::DELETE_RB(BRnode* z)
     return;
 
 }
+
 void BRtree::DELETE_FIXUP_RB(BRnode* x)
 {
     BRnode* w;
@@ -592,8 +580,6 @@ void BRtree::DELETE_FIXUP_RB(BRnode* x)
     return;
 }
 
-
-
 BRnode* BRtree::MINIMUM_TREE(BRnode* x)
 {
     while (x->left != leavesBlack)
@@ -602,15 +588,6 @@ BRnode* BRtree::MINIMUM_TREE(BRnode* x)
     }
     return x;
 }
-
-
-
-
-
-
-
-
-
 
 //Tree display code found here:
 //http://stackoverflow.com/questions/15853438/how-to-display-binary-search-tree-in-console-properly
@@ -644,7 +621,6 @@ void printLevelOrder (BRnode* root, int depth) {
   }
 }
 
-
 void display_data(nodePage* listData, int size)
 {
     for (int i = 0; i < size; i++)
@@ -652,11 +628,6 @@ void display_data(nodePage* listData, int size)
         cout << "Hash: " << listData[i].hash << "  Page ID: " << listData[i].id << endl;
     }
 }
-
-
-
-
-
 
 int main()
 {
