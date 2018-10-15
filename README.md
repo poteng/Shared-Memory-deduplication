@@ -32,5 +32,8 @@ The third set (5 pages) is for testing Update(). One of them intends to have the
 
 After each function (Load and Update), the trees will show for checking in detail.
 
+## Installation
+Build and run [Shared Memory deduplication](SharedMemorydeduplication.cpp) file
+
 ## Details
 See [Report](Report.pdf) to understand more about implementation, time complexity and examples.
