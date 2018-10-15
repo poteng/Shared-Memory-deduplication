@@ -22,7 +22,7 @@ Run algorithm explained in [IBM's website](https://www.ibm.com/developerworks/li
 
 
 ## Test cases
-The sample runs were already included in the cpp file. 3 sets of data are created.
+Three test data set will be randomly generated in the program.
 
 The first set is only for testing Load(), which only loads data of 5 pages into the unstable tree.  
 
