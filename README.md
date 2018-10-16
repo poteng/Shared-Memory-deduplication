@@ -9,7 +9,7 @@ Develop an algorithm that mimics the de-duplication operations in Linux Kernel.
 Instead of using real memory, the program simulate the memory operations using a byte arrayy, which will be considered to be the available memory.
 
 ## Operations
-The system has the following operations: 
+The system has the following 3 operations: 
 
 #### Load
 Accept a list of <page id, hash of page content> records.
