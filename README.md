@@ -11,13 +11,13 @@ Instead of using real memory, the program simulate the memory operations using a
 ## Operations
 The system has the following operations: 
 
-### Load
-Accept a list of <page id, hash of page content>. 
+#### Load
+Accept a list of <page id, hash of page content> records.
 
-### Update
-Accept another list. If page id already loaded, update its hash.
+#### Update
+Accept another list of <page id, hash of page content>. If page id is already loaded, update its hash, which is equivalent to page content changing. If it's not loaded, add it to the system.
 
-### De-dupulicate
+#### De-dupulicate
 Run algorithm explained in [IBM's website](https://www.ibm.com/developerworks/linux/library/l-kernel-shared-memory/index.html) and display if any memory is freed.
 
 
